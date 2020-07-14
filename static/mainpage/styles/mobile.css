@@ -1,0 +1,676 @@
+/************* MOBILE VERSION *****************/
+
+@media (max-width: 1440px) {
+
+
+  .Pagesize{
+    text-align: center;
+    width: 87.5%;
+  }
+
+  #blackening{
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.5;
+  }
+
+
+
+  /*********Header******/
+  header {
+    background-color: #CDEEFE;
+    height: 80px;
+    line-height: 100px;
+    vertical-align: middle;
+    width: 100%;
+    position:fixed;
+    z-index: 999;
+  }
+
+  header .row {
+    position: fixed;
+    right: 0px;
+    margin-right: 2.5vw;
+    margin-left: 110px;
+  }
+
+  header .anchors{
+    position: absolute;
+    right: 0px;
+  }
+
+  header .topindex {
+    display: none;
+  }
+
+  header svg{
+    margin-right: 16px;
+    margin-top: 25px;
+    height: 30px;
+    width: 30px;
+  }
+
+  #mail{
+    position: absolute;
+    top: -25px;
+    right: 36vw;
+  }
+  #whats{
+    position: absolute;
+    top: -25px;
+    right: 24vw;
+  }
+  #Github{
+    position: absolute;
+    top: -25px;
+    right: 12vw;
+  }
+  #cv{
+    position: absolute;
+    top: -25px;
+    right: 0vw;
+  }
+
+  #phonemenu{
+    display: block;
+    position: fixed;
+    left: 20px;
+    margin-left: 2.5vw;
+  }
+
+  #phonemenu:active{
+    opacity: 0.8;
+  }
+
+  .wrapper{
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    width: 90%;
+    max-width: 350px;
+    height: 430px;
+    background: transparent;
+    z-index: 000;
+    pointer-events: none;
+
+  }
+  #phoneindex{
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-color: #060633;
+    position: absolute;
+    z-index: 1000;
+    left: -100%;
+    transition: 1s;
+  }
+
+
+
+
+  .phoneindex{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .phoneindex:hover{
+    color: #CDEEFE;
+  }
+
+  .socialphone{
+    width: 30px;
+    height: 30px;
+    margin-right: -23px;
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+
+  .svgsphone:hover{
+    fill: #CDEEFE;
+  }
+  .svgsphone:active{
+    opacity: 0.8;
+  }
+
+
+
+  /*********AboutMe******/
+
+  .aboutme{
+    text-align: center;
+    padding-top: 130px;
+    background-color: white;
+
+  }
+  .aboutme h4{
+    margin-top: 25px;
+  }
+
+  .aboutme .row{
+    margin-left: -5px;
+    margin-bottom: 150px;
+  }
+  .swipityswipe {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .swipityswipe  img {
+      min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
+      width: 100%; /* can't take this out either as it breaks Chrome */
+  }
+
+  .mypath{
+    width: 100%;
+  }
+  .maths{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bank{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .programming{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutme img{
+    margin-bottom: 50px;
+  }
+
+  .maths p{
+    width: 100%;
+    margin-right: 10px;
+
+  }
+
+  .bank p{
+    width: 100%;
+    margin-right: 10px;
+
+  }
+
+  .programming p{
+    width: 100%;
+  }
+
+  #mathematician{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    height: calc(0px + 50vw);
+
+  }
+  #banker{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    height: calc(0px + 50vw);
+
+  }
+  #programmer{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    height: calc(0px + 50vw);
+
+  }
+
+  #right{
+    display: block;
+    position: absolute;
+    top: 500px;
+    right: 5%;
+  }
+  #left{
+    display: none;
+    position: absolute;
+    top: 500px;
+    left: 5%;
+    transform: rotate(180deg);
+
+  }
+
+  #path{
+    display: none;
+    position:relative;
+    top: -357px;
+    left: 0px;
+  }
+
+
+  /*********Educación******/
+  .education{
+    width: 120%;
+    margin-left: -10%;
+    padding-top: 50px;
+  }
+  .education h2{
+    margin-bottom: 20px;
+  }
+  .education p{
+    width: 69%;
+    text-align: left;
+    margin-left: -20px;
+  }
+  .education li{
+    font-size: 14px;
+    margin-top: -35px;
+    margin-left: 00px;
+
+  }
+  .education ul{
+    display: inline-block;
+    padding-bottom: 50px;
+    /*para sobrescribir el margen de bootstrap*/
+    margin-bottom: 0;
+  }
+  .education .row{
+    margin-right: 0px;
+    align-items: center;
+  }
+  .checkball{
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+
+  }
+  .check{
+    width: 22px;
+    height: 20px;
+    margin-left: -33px;
+    margin-top: -17px;
+    margin-right: 40px;
+
+  }
+
+  /*********Contact******/
+  .contact{
+    padding-top: 50px;
+  }
+  .contact h4{
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .contacts{
+    display: inline-block;
+    width:100%;
+  }
+  .contactimg{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 61px;
+    margin-right: 16px;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+
+
+  /*********General******/
+  h1{
+    font-size: calc(24px + 0.5vw);
+    line-height: calc(28px + 0.5vw);
+  }
+
+  h2{
+    font-size: calc(20px + 0.5vw);
+  }
+
+  h3{
+    font-size: calc(24px + 0.5vw);
+
+  }
+
+  h4{
+    font-size: calc(16px + 0.5vw);
+    line-height: calc(22px + 0.5vw);
+  }
+
+  p{
+    font-size: calc(14px + 0.5vw);
+  }
+
+  button{
+    display: none;
+  }
+
+  .text320{
+    display: block;
+  }
+  .text1440{
+    display: none;
+  }
+
+
+
+  /*********Lenguajes y herramientas******/
+  .lenguajes {
+    margin-left:-10%;
+    text-align: center;
+    width: 120%;
+    background-color:  #F3F3F3;
+
+  }
+
+  .lenguajes h2{
+    margin-left:10%;
+
+    width: 87.5%;
+    padding-top: 50px;
+    margin-bottom: 25px;
+  }
+  .lenguajes h4{
+    margin-left:10%;
+
+    width: 87.5%;
+  }
+
+  #bigrobot{
+    margin-top:-35%;
+    margin-left:-25%;
+    width: 200%;
+  }
+  #screen{
+    width: 58%;
+    height: 00px;
+    padding-top: 35%;
+    border-radius: 8px;
+    background: white;
+    position: absolute;
+    margin-top: -116%;
+    margin-left: 25%;
+    text-align: left;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    background: #060633;
+    display:none;
+    overflow-y: auto;
+
+  }
+  #screen p{
+    position: absolute;
+    top: 0;
+    left:0;
+    font-size: calc(12px + 1vw);
+    line-height: calc(16px + 1vw);
+
+  }
+  #screen::-webkit-scrollbar {
+      width: 5px;
+      left:-100px;
+  }
+
+  #screen::-webkit-scrollbar-track {
+      border-radius: 10px;
+  }
+
+  #screen::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: white;
+  }
+
+  .btn{
+    position:relative;
+    width: 15vw;
+    height: 15vw;
+    margin-top: -55%;
+    margin-left: 40%;
+  }
+
+
+    /*********Mis Programas******/
+    .misprogramas {
+      padding-bottom: 100px;
+      background-color: white;
+      padding-top: 100px;
+    }
+
+    .misprogramas h2{
+      margin-bottom: 25px;
+    }
+
+    .selectables{
+      display: inline-block;
+      width: 100%;
+      margin: 35px 25px 30px;
+    }
+
+    .selectables a{
+      margin-right: 30px;
+      font-size: 16px;
+    }
+
+    .programs{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .col-4{
+      width: 270px;
+      height:  270px;
+      max-width: 270px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      flex: 0 0 100%;
+    }
+    .IA h3{
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: calc(24px + 0vw);
+
+    }
+
+    .col-4 p{
+      width: 215px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 14px;
+    }
+
+
+
+    #Pong{
+      background-color: #060633;
+      color: white;
+    }
+    #paddle1{
+      width: 8px;
+      height:40px;
+    }
+
+    #paddle2{
+      width: 8px;
+      height:40px;
+    }
+
+    #pongball{
+      width: 10px;
+      height: 10px;
+    }
+
+    .Webs{
+      padding-top: 120px;
+    }
+
+    #CSFinance{
+      background-color: #CDEEFE;
+    }
+    #CSFinance p{
+      margin-top: 25px;
+      transform: translate(0%, 0%);
+      display: inline-block;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    #CSFinance:hover h3{
+      transform: translateY(-300%);
+    }
+    #CSFinance:hover p{
+      opacity: 1;
+      transform: translateY(-70%);
+    }
+
+    #tablero{
+      width: 132px;
+      height: 120px;
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+    }
+    #X1{
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+    #X2{
+      width: 25px;
+      height: 25px;
+
+      position: absolute;
+      bottom: -10px;
+      right: -5px;
+    }
+    #O1{
+      width: 25px;
+      height: 25px;
+
+      position: absolute;
+      bottom: 0px;
+      right: 45px;
+    }
+    #O2{
+      width: 25px;
+      height: 25px;
+
+      position: absolute;
+      bottom: 0px;
+      right: 85px;
+    }
+
+    .balls{
+      text-align: center;
+      margin-top: 15px;
+      margin-left: 15%;
+    }
+    .sphere{
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+
+    #Computervision p{
+      position: relative;
+      z-index: 0;
+    }
+    #minirobot{
+      width: 50%;
+      height: 97px;
+      position: absolute;
+      bottom: -6%;
+      right: -4%;
+    }
+    #roboteye{
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      bottom: 12.5%;
+      right: 21.5%;
+    }
+    #robotblink{
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      bottom: 11.3%;
+      right: 20.2%;
+      display: none;
+    }
+
+
+    #Books p{
+      margin-top: 25px;
+      transform: translate(0%, 0%);
+      display: inline-block;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    #Books:hover h3{
+      transform: translateY(-300%);
+    }
+    #Books:hover p{
+      opacity: 1;
+      transform: translateY(-80%);
+    }
+
+    #mine1{
+      height: 30px;
+      width:30px;
+    }
+    #mine3{
+      height: 30px;
+      width:30px;
+
+      position: absolute;
+      top: 75%;
+      left: 80%;
+    }
+    #mine{
+      height: 30px;
+      width:30px;
+
+      position: absolute;
+      top: 10%;
+      left: 2%;
+    }
+
+    #checknim{
+      display: none;
+      position: absolute;
+      top: 78%;
+      right: 43%;
+
+    }
+    #loading{
+      position: absolute;
+      top: 78%;
+      right: 43%;
+    }
+
+
+    #Others{
+      margin-left: 0px;
+    }
+
+    #Others li{
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+
+}

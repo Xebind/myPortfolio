@@ -1,0 +1,1013 @@
+@font-face{
+  font-family: RobotoBold;
+  src: url(fonts/RobotoMono-Bold.ttf);
+}
+@font-face{
+  font-family: RobotoRegular;
+  src: url(fonts/RobotoMono-Regular.ttf);
+}
+@font-face{
+  font-family: OSansBold;
+  src: url(fonts/OpenSans-Bold.ttf);
+}
+@font-face{
+  font-family: OSansRegular;
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
+/*********General******/
+body, html{
+  background-color:  white;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  background-color: #E5E5E5;
+}
+
+h1{
+  font-size: 54px;
+  font-family: RobotoBold;
+}
+
+h2{
+  font-size: 44px;
+  font-family: RobotoBold;
+}
+
+h3{
+  font-size: 36px;
+  font-family: RobotoBold;
+
+}
+
+h4{
+  font-size: 24px;
+  font-family: OSansRegular;
+}
+p{
+  font-size: 18px;
+  font-family: OSansRegular;
+
+}
+
+button{
+  display: none;
+  font-size: 18px;
+  font-family: OSansBold;
+  letter-spacing: 4%;
+  color: white;
+  border: none;
+  background-color: #FA7267;
+  border-radius: 24px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+}
+
+button span{
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.buttontxt::before {
+  content: "Juégame";
+  position: absolute;
+  transform: translateY(200%);
+}
+
+.buttontxt{
+  transform:translateY(-200%);
+}
+button:hover span{
+  transform: translateY(0%);
+}
+
+
+ul{
+  list-style: none;
+}
+
+a{
+  font-family: OSansBold;
+  font-size: 24px;
+  letter-spacing: 2%;
+  color: black;
+  text-decoration: none !important;
+}
+
+a:hover{
+  color: #FA7267;
+}
+a:active{
+  color: #FA7267;
+}
+
+
+.contactimg:hover{
+  fill: #FA7267;
+}
+.svgs:hover{
+  fill: #FA7267;
+}
+
+.svgs:active{
+  opacity: 0.8;
+}
+
+
+.Pagesize{
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.popup {
+    display:none;
+    background:#FFFFFF;
+    position:fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height:50%;
+    z-index: 999;
+    border:2px solid #000;
+}
+
+.closePopup {
+    float:right;
+    font-weight:bold;
+    color:red;
+    cursor:pointer;
+}
+
+canvas{
+  margin-top: 75px;
+}
+
+
+.text320{
+  display: none;
+}
+.text1440{
+  display: block;
+}
+
+
+/*********Header******/
+header {
+  background-color: #CDEEFE;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  width: 100%;
+  position:fixed;
+  z-index: 999;
+}
+
+header .row {
+  margin-left: 80px;
+  margin-right: 75px;
+}
+
+header .anchors{
+  position: absolute;
+  right: 0px;
+}
+
+header a {
+  text-align:right;
+  margin-left: 60px;
+  font-family: OSansBold;
+  font-size: 24px;
+  letter-spacing: 2%;
+}
+
+header svg{
+  margin-right: 30px;
+  height: 55px;
+  width: 55px;
+  margin-left: -60px;
+}
+#phonemenu{
+  display: none;
+}
+#phoneindex{
+  display: none;
+}
+
+.wrapper{
+  display: none;
+}
+
+/*********AboutMe******/
+
+#right{
+  display: none;
+}
+#left{
+  display: none;
+}
+
+.aboutme{
+  text-align: center;
+  padding-top: 180px;
+  background-color: white;
+  margin-bottom: -180px;
+
+}
+
+.aboutme h4{
+  margin-top: 35px;
+}
+
+.aboutme .row{
+  margin-left: 90px;
+  padding-bottom: 80px;
+}
+
+.aboutme img{
+  margin-bottom: 50px;
+}
+
+.maths p{
+  width:392px;
+}
+
+.bank p{
+  width: 352px;
+}
+
+.programming p{
+  width:360px;
+}
+
+.bank{
+  margin-left: 60px;
+  margin-right: 80px;
+}
+
+#mathematician{
+  margin-top: 70px;
+  width: 350px;
+  height:421px;
+}
+#banker{
+  margin-top: 110px;
+  width: 165px;
+  height:380px;
+
+}
+#programmer{
+  margin-top: 70px;
+  width: 350px;
+  height:421px;
+
+}
+#path{
+  position:relative;
+  top: -357px;
+  left: 0px;
+}
+
+/*********Lenguajes y herramientas******/
+.lenguajes {
+  text-align: center;
+  background-color:  #F3F3F3;
+}
+
+.lenguajes h2{
+  padding-top: 84px;
+  margin-bottom: 36px;
+}
+
+#bigrobot{
+  margin-top: -200px;
+}
+#screen{
+  width: 400px;
+  height: 290px;
+  border-radius: 8px;
+  background: white;
+  position: absolute;
+  margin-top: -820px;
+  margin-left: 350px;
+  text-align: left;
+  font-family: RobotoRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: white;
+  background: #060633;
+  display:none;
+}
+#initial {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#blinkbar{
+  animation: blinking 1s infinite ;
+}
+
+.btn{
+  position:relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #FA7267;
+  margin-top: -400px;
+  margin-left: -100px;
+
+}
+
+.btn .bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  border-radius: 50%;
+  background-color: #FA7267;
+  animation: pulse 1s infinite ;
+}
+
+@keyframes blinking {
+  0%{
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(1,1);
+  }
+  100%{
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+
+/*to fix the bootstrap padding*/
+.contenedor{
+  line-height: 0px;
+
+}
+
+/*********Mis Programas******/
+.misprogramas {
+  text-align: center;
+  padding-bottom: 100px;
+  background-color: white;
+  padding-top: 160px;
+}
+
+.misprogramas h2{
+  margin-bottom: 36px;
+}
+
+.selectables{
+  width: 40%;
+  margin: 70px 500px 60px;
+}
+
+.selectables a{
+  margin-right: 90px;
+  font-family: OSansBold;
+  font-size: 24px;
+  letter-spacing: 2%;
+}
+
+.programs{
+  margin-left: 44px;
+  margin-right: 44px;
+}
+
+.col-4{
+  width: 426px;
+  height: 426px;
+}
+
+.IA h3{
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.col-4 p{
+  width: 367px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#Pong{
+  background-color: #060633;
+  color: white;
+}
+
+#Pong button {
+  margin-top: 45px;
+}
+
+#paddle1{
+  width: 15px;
+  height:50px;
+  background-color: white;
+  position: absolute;
+  top: 25%;
+  left:1%;
+  animation: paddle1 5s infinite linear;
+  animation-play-state: paused;
+}
+
+#paddle2{
+  width: 15px;
+  height:50px;
+  background-color: white;
+  position: absolute;
+  top: 75%;
+  left: 96%;
+  animation: paddle2 5s infinite linear;
+  animation-play-state: paused;
+
+}
+
+#pongball{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  animation: pongball 5s infinite linear;
+  animation-play-state: paused;
+
+}
+
+@keyframes paddle1 {
+  0%{
+    top: 25%;
+  }
+  20%{
+    top: 40%;
+  }
+  40%{
+    top: 10%;
+  }
+  60%{
+    top: 55%;
+  }
+  80%{
+    top: 85%;
+  }
+  100%{
+    top: 25%;
+  }
+}
+
+@keyframes paddle2 {
+  0%{
+    top: 75%;
+  }
+  20%{
+    top: 25%;
+  }
+  40%{
+    top: 60%;
+  }
+  60%{
+    top: 50%;
+  }
+  80%{
+    top: 85%;
+  }
+  100%{
+    top: 75%;
+  }
+}
+
+@keyframes pongball {
+  0%{
+    top: 65%;
+    left: 75%;
+  }
+  20%{
+    top: 30%;
+    left: 93%;
+  }
+  40%{
+    top: 0%;
+    left: 70%;
+  }
+  60%{
+    top: 60%;
+    left: 4%;
+  }
+  80%{
+    top: 97%;
+    left: 60%;
+  }
+  100%{
+    top: 65%;
+    left: 75%;
+  }
+}
+
+
+
+.Webs{
+  padding-top: 192px;
+}
+
+#CSFinance{
+  background-color: #CDEEFE;
+}
+#CSFinance p{
+  margin-top: 25px;
+  transform: translate(0%, 0%);
+  display: inline-block;
+  opacity: 0;
+  transition: 0.3s;
+}
+#CSFinance h3{
+  display: inline-block;
+  transition: 0.3s;
+}
+#CSFinance:hover h3{
+  transform: translateY(-300%);
+}
+#CSFinance:hover p{
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+#TicTacToe{
+  border: 10px solid #0DA1E7;
+}
+#TicTacToe p{
+  position: absolute;
+  z-index: 9;
+}
+
+#TicTacToe button{
+  margin-top: 125px;
+  z-index: 20;
+}
+
+#tablero{
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+#X1{
+  position: absolute;
+  bottom: 65px;
+  right: 65px;
+  animation: tictac 0.5s forwards;
+  animation-play-state: paused;
+}
+#X2{
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  animation: tictac 1.5s forwards;
+  animation-play-state: paused;
+}
+#O1{
+  position: absolute;
+  bottom: -10px;
+  right: 75px;
+  animation: tictac 1s forwards;
+  animation-play-state: paused;
+}
+#O2{
+  position: absolute;
+  bottom: 0px;
+  right: 150px;
+  animation: tictac 2s forwards;
+  animation-play-state: paused;
+}
+
+@keyframes tictac {
+  0%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#Pagerank{
+  background-color: #CDEEFE;
+}
+
+.balls{
+  margin-top: 45px;
+  margin-left: 90px
+}
+
+.sphere{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 30px;
+
+}
+.ball1 {
+  animation: ball1 3s infinite;
+  animation-play-state: paused;
+}
+.ball2 {
+  animation: ball2 3s infinite;
+  animation-play-state: paused;
+
+}
+.ball3 {
+  animation: ball3 3s infinite;
+  animation-play-state: paused;
+
+}
+.ball4 {
+  animation: ball4 3s infinite;
+  animation-play-state: paused;
+
+}
+
+.ball5 {
+  background-color: white;
+  animation: ball5 3s infinite;
+  animation-play-state: paused;
+}
+@keyframes ball1 {
+  0%{
+    background-color: black;
+  }
+  39%{
+    background-color: black;
+  }
+  40%{
+    background-color: white;
+  }
+  49%{
+    background-color: white;
+  }
+  50%{
+    background-color: black;
+  }
+  100%{
+    background-color: black;
+  }
+}
+@keyframes ball2 {
+  0%{
+    background-color: black;
+  }
+  29%{
+    background-color: black;
+  }
+  30%{
+    background-color: white;
+  }
+  59%{
+    background-color: white;
+  }
+  60%{
+    background-color: black;
+  }
+  100%{
+    background-color: black;
+  }
+}
+@keyframes ball3 {
+  0%{
+    background-color: black;
+  }
+  19%{
+    background-color: black;
+  }
+  20%{
+    background-color: white;
+  }
+  69%{
+    background-color: white;
+  }
+  70%{
+    background-color: black;
+  }
+  100%{
+    background-color: black;
+  }
+}
+@keyframes ball4 {
+  0%{
+    background-color: black;
+  }
+  9%{
+    background-color: black;
+  }
+  10%{
+    background-color: white;
+  }
+  79%{
+    background-color: white;
+  }
+  80%{
+    background-color: black;
+  }
+  100%{
+    background-color: black;
+  }
+}
+@keyframes ball5 {
+  0%{
+    background-color: white;
+  }
+  89%{
+    background-color: white;
+  }
+  90%{
+    background-color: black;
+  }
+  99%{
+    background-color: black;
+  }
+  100%{
+    background-color: white;
+  }
+}
+
+#Computervision{
+  border: 10px solid #060633;
+  box-sizing: border-box;
+}
+
+#Computervision button{
+  position:relative;
+}
+
+#minirobot{
+  position: absolute;
+  bottom: -3%;
+  right: -3%;
+}
+#roboteye{
+  position: absolute;
+  bottom: 13.5%;
+  right: 20.5%;
+}
+#robotblink{
+  position: absolute;
+  bottom: 14%;
+  right: 20%;
+  display: none;
+}
+
+
+#Books{
+  background: #EA6868;
+  color: white;
+}
+#Books p{
+  margin-top: 25px;
+  transform: translate(0%, 0%);
+  display: inline-block;
+  opacity: 0;
+  transition: 0.3s;
+}
+#Books h3{
+  display: inline-block;
+  transition: 0.3s;
+}
+#Books:hover h3{
+  transform: translateY(-300%);
+}
+#Books:hover p{
+  opacity: 1;
+  transform: translateY(-125%);
+}
+
+#Buscaminas{
+  border: 10px solid #EA6868;
+  box-sizing: border-box;
+}
+#Buscaminas h3{
+  margin-top: 45px;
+}
+
+#Buscaminas button{
+  margin-top: 10px;
+}
+
+#mine1{
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+#mine3{
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  opacity: 1;
+  display: none;
+  animation: mine3 0.5s  ease-in;
+  animation-play-state: paused;
+
+}
+#mine{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  opacity: 1;
+  animation: mine 1s ease-in;
+  display: none;
+  animation-play-state: paused;
+
+
+}
+
+@keyframes mine3 {
+  0%{
+    opacity: 0;
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes mine {
+  0%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+#Parser{
+  background-color: #CDEEFE;
+}
+#Parser button{
+  margin-top: 45px;
+}
+.parsedwords{
+  animation: parsing 2s ease-in both;
+  animation-play-state: paused;
+}
+
+@keyframes parsing {
+  0%{
+    background-color: #CDEEFE;
+    color: black;
+  }
+  99%{
+    background-color: #CDEEFE;
+    color: black;
+  }
+  100%{
+    background-color: black;
+    color: white;
+  }
+}
+
+
+#Nim{
+  background-color: #060633;
+  color: white;
+}
+#Nim button{
+  margin-top: 45px;
+}
+#checknim{
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+
+}
+#loading{
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  animation: spin 2s infinite ;
+  display: none;
+}
+@keyframes spin {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+#Others{
+  display: none;
+  margin-left: 100px;
+}
+
+#Others li{
+  margin-bottom: 30px;
+  text-align:left;
+  font-family: OSansRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #0DA1E7; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  font-size: 30px;
+  vertical-align:middle;
+  padding-top: 0px;
+}
+/*********Educación******/
+.education{
+  background-color: #0DA1E7;
+  padding-top: 85px;
+
+}
+.education h2{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.education li{
+  color: white;
+  font-family: OSansBold;
+  font-size: 24px;
+  letter-spacing: 2%;
+  margin-top: 50px;
+  margin-left: 50px
+}
+.education ul{
+  padding-bottom: 120px;
+  /*para sobrescribir el margen de bootstrap*/
+  margin-bottom: 0;
+}
+.checkball{
+  background-color: white;
+  width: 35px;
+  height: 35px;
+}
+.check{
+  margin-right: 50px;
+  margin-left: -60px;
+  margin-top: 5px;
+  stroke-dasharray: 93.10029602050781;
+  stroke-dashoffset: 93.10029602050781;
+  stroke-linecap: round;
+  animation: dash 2s linear forwards;
+  animation-play-state: paused;
+
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*********Contact******/
+.contact{
+  padding-top: 80px;
+  text-align: center;
+  background-color: white;
+}
+.contact h4{
+  margin-top: 35px;
+  margin-bottom: 65px;
+}
+.contacts{
+  margin-left: auto;
+  margin-right: auto;
+  width:28%;
+}
+.contactimg{
+  width: 65px;
+  height: 65px;
+  margin-bottom: 100px;
+  margin-right: 30px;
+}

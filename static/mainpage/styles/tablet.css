@@ -1,0 +1,341 @@
+@media (max-width: 1440px) and (min-width: 760px){
+
+
+  h2{
+    font-size: 44px;
+  }
+
+  h3{
+    font-size: 36px;
+
+  }
+
+  h4{
+    font-size: 24px;
+  }
+
+
+  /*********AboutMe******/
+
+  .aboutme{
+    text-align: center;
+    padding-top: 130px;
+    background-color: white;
+
+  }
+  .aboutme h4{
+    margin-top: 25px;
+  }
+
+  .aboutme .row{
+    margin-left: -5px;
+    margin-bottom: 150px;
+  }
+  .swipityswipe {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .swipityswipe  img {
+      min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
+      width: 100%; /* can't take this out either as it breaks Chrome */
+  }
+
+  .mypath{
+    width: 100%;
+  }
+  .maths{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bank{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+
+  .programming{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+  .aboutme img{
+    margin-bottom: 50px;
+  }
+
+  .maths p{
+    width: 100%;
+    margin-right: 10px;
+
+  }
+
+  .bank p{
+    width: 100%;
+    margin-right: 10px;
+
+  }
+
+  .programming p{
+    width: 100%;
+  }
+
+  #mathematician{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    max-height: 425px;
+    height: calc(0px + 50vw);
+
+  }
+  #banker{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    max-height: 425px;
+    height: calc(0px + 50vw);
+
+  }
+  #programmer{
+    margin-top: 55px;
+    width: 210px;
+    min-height: 250px;
+    max-height: 425px;
+    height: calc(0px + 50vw);
+
+  }
+
+  #right{
+    display: block;
+    position: absolute;
+    top: 65%;
+    right: 5%;
+  }
+  #left{
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    transform: rotate(180deg);
+
+  }
+
+  #path{
+    display: none;
+    position:relative;
+    top: -357px;
+    left: 0px;
+  }
+
+
+  /*********Lenguajes y herramientas******/
+  .lenguajes {
+    margin-left:-10%;
+    width: 120%;
+    text-align: center;
+    background-color:  #F3F3F3;
+    text-align: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .lenguajes h2{
+    padding-top: 84px;
+    margin-bottom: 36px;
+  }
+
+  #bigrobot{
+    margin-left: 0px;
+    margin-top: -250px;
+  }
+
+  #screen{
+    width: 400px;
+    height: 290px;
+    border-radius: 8px;
+    background: white;
+    position: absolute;
+    margin-top: -820px;
+    margin-left: 350px;
+    text-align: left;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+    background: #060633;
+    display:none;
+  }
+
+  .btn{
+    position:relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #FA7267;
+    margin-top: -390px;
+    margin-left: 630px;
+
+  }
+  .contenedor{
+    width: 110px;
+  }
+
+  /*********Mis Programas******/
+  .misprogramas {
+    text-align: center;
+    padding-bottom: 100px;
+    background-color: white;
+    padding-top: 160px;
+  }
+
+  .misprogramas h2{
+    margin-bottom: 36px;
+  }
+
+  .selectables{
+    display: inline-block;
+    width: 100%;
+    margin: 35px 25px 30px;
+  }
+
+  .selectables a{
+    margin-right: 60px;
+    font-size: 24px;
+  }
+
+  .programs{
+    margin-left: 44px;
+    margin-right: 44px;
+  }
+
+  .col-4{
+    width: 426px;
+    height: 426px;
+    max-width: 426px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+
+  }
+  .col-4 p{
+    width: 367px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+  }
+  #minirobot{
+    position: absolute;
+    bottom: -2%;
+    right: -2%;
+  }
+
+  #roboteye{
+    position: absolute;
+    bottom: 14.5%;
+    right: 22.7%;
+  }
+  #robotblink{
+    position: absolute;
+    bottom: 14.7%;
+    right: 22%;
+    display: none;
+  }
+
+
+  /*********Educación******/
+  .education{
+    width: 120%;
+    margin-left: -10%;
+    padding-top: 50px;
+  }
+  .education h2{
+    margin-bottom: 20px;
+  }
+  .education p{
+    width: 90%;
+    text-align: left;
+    margin-left: -20px;
+  }
+  .education li{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 00px;
+
+  }
+  .education ul{
+    width: 90%;
+
+    display: inline-block;
+    padding-bottom: 50px;
+    /*para sobrescribir el margen de bootstrap*/
+    margin-bottom: 0;
+  }
+  .education .row{
+    margin-right: 0px;
+    align-items: center;
+  }
+  .checkball{
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+
+  }
+  .check{
+    width: 22px;
+    height: 20px;
+    margin-left: -50px;
+    margin-top: -17px;
+    margin-right: 40px;
+
+  }
+
+}
+
+@media (max-width: 930px) and (min-width: 760px){
+  h1{
+    font-size: 44px;
+  }
+
+
+  .contenedor{
+    width: 110px;
+  }
+
+  #bigrobot{
+    margin-left: -190px;
+    margin-top: -250px;
+  }
+  .btn{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #FA7267;
+    margin-top: -250px;
+    margin-left: 390px;
+  }
+  #screen{
+    width: 400px;
+    height: 290px;
+    border-radius: 8px;
+    background: white;
+    position: absolute;
+    margin-top: -820px;
+    margin-left: 150px;
+    text-align: left;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+    background: #060633;
+    display:none;
+  }
+
+
+}
