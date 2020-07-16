@@ -121,7 +121,8 @@ a:active{
 
 
 .Pagesize{
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -374,12 +375,13 @@ header svg{
 }
 
 .selectables{
-  width: 40%;
-  margin: 70px 500px 60px;
+  display: inline-block;
+  width: 100%;
+  margin: 70px 00px 60px;
 }
 
 .selectables a{
-  margin-right: 90px;
+  margin-left: 90px;
   font-family: OSansBold;
   font-size: 24px;
   letter-spacing: 2%;

@@ -1,6 +1,6 @@
 /************* MOBILE VERSION *****************/
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
 
 
   .Pagesize{
@@ -378,7 +378,8 @@
     margin-bottom: 25px;
   }
   .lenguajes h4{
-    margin-left:10%;
+    margin-left:auto;
+    margin-right: auto;
 
     width: 87.5%;
   }
