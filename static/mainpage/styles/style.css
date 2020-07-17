@@ -960,12 +960,13 @@ ul li::before {
 }
 
 .education li p{
+  width: 70%;
+
   color: white;
   font-family: OSansBold;
   font-size: 24px;
   letter-spacing: 2%;
   margin-top: -20px;
-  margin-left: 50px;
 }
 .education ul{
   padding-bottom: 120px;
@@ -980,7 +981,6 @@ ul li::before {
   height: 35px;
 }
 .check{
-
   margin-right: 50px;
   margin-left: -60px;
   margin-top: -15px;

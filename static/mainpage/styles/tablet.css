@@ -29,7 +29,7 @@
 
   .aboutme .row{
     margin-left: -5px;
-    margin-bottom: 150px;
+    margin-bottom: 0px;
   }
   .swipityswipe {
     align-items: center;
@@ -187,7 +187,7 @@
     text-align: center;
     padding-bottom: 100px;
     background-color: white;
-    padding-top: 160px;
+    padding-top: 100px;
   }
 
   .misprogramas h2{
@@ -201,8 +201,9 @@
   }
 
   .selectables a{
-    margin-right: 60px;
+    margin-right: 45px;
     font-size: 24px;
+    margin-left: 0px;
   }
 
   .programs{
@@ -287,7 +288,7 @@
   .check{
     width: 22px;
     height: 20px;
-    margin-left: -50px;
+    margin-left: 00px;
     margin-top: -17px;
     margin-right: 40px;
 

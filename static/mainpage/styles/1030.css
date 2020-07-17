@@ -1,4 +1,4 @@
-@media (max-width: 1439px) and (min-width: 1023px){
+@media (max-width: 1439px) and (min-width: 1024px){
 
   h1{
     font-size: 38px;
@@ -128,7 +128,180 @@
     animation: pulse 1s infinite ;
   }
 
+  /*********Mis Programas******/
+  .misprogramas {
+    padding-bottom: 100px;
+    padding-top: 160px;
+  }
 
+  .programs{
+    width: 915px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-4{
+    width: 305px;
+    height: 305px;
+    flex: 0 0 100%
+  }
+
+  .IA h3{
+    width: 100%;
+    font-size: 26px;
+    margin-top: 36px;
+    margin-bottom: 18px;
+  }
+
+  .col-4 p{
+    font-size: 13px;
+    width: 263px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Webs {
+    padding-top: 137px;
+  }
+  .Webs h3{
+    font-size: 26px;
+  }
+
+  #paddle1{
+    width: 10px;
+  }
+
+  #paddle2{
+    width: 10px;
+  }
+
+  #pongball{
+    width: 10px;
+    height: 10px;
+  }
+
+  #CSFinance:hover p{
+    transform: translateY(-120%);
+  }
+
+  #tablero{
+    width: 163px;
+    height: 147px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+  }
+  #X1{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+  #X2{
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+  }
+  #O1{
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+  }
+  #O2{
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 110px;
+  }
+
+  .balls{
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 65px;
+  }
+   .balls .sphere{
+    width: 17px;
+    height: 17px;
+    margin-right: 21px;
+  }
+
+  #Computervision h3{
+    font-size: 21px;
+  }
+
+  #Computervision p{
+    position: relative;
+    z-index: 0;
+  }
+  #minirobot{
+    width: 50%;
+    height: 101px;
+    position: absolute;
+    bottom: 0%;
+    right: -4%;
+  }
+  #roboteye{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: 16.5%;
+    right: 21.5%;
+  }
+  #robotblink{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 15.8%;
+    right: 20.6%;
+    display: none;
+  }
+
+  #Books:hover p{
+    opacity: 1;
+    transform: translateY(-150%);
+  }
+
+
+  #mine1{
+    height: 30px;
+    width:30px;
+  }
+  #mine3{
+    height: 30px;
+    width:30px;
+
+    position: absolute;
+    top: 80%;
+  }
+  #mine{
+    height: 30px;
+    width:30px;
+
+  }
+
+
+
+  #checknim{
+    display: none;
+    position: absolute;
+    top: 70%;
+    right: 43%;
+
+  }
+  #loading{
+    position: absolute;
+    top: 70%;
+    right: 43%;
+  }
 
 
 }
