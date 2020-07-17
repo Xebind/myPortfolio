@@ -229,7 +229,7 @@ header svg{
 
 .aboutme .row{
   margin-left: 90px;
-  padding-bottom: 80px;
+  padding-bottom: 240px;
 }
 
 .aboutme img{
@@ -271,9 +271,10 @@ header svg{
 
 }
 #path{
-  position:relative;
-  top: -400px;
-  left: 0px;
+  position: absolute;
+  width: 1440px;
+
+  top: 835px;
 }
 
 /*********Lenguajes y herramientas******/
@@ -955,15 +956,16 @@ ul li::before {
 }
 .education h2{
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 65px;
 }
-.education li{
+
+.education li p{
   color: white;
   font-family: OSansBold;
   font-size: 24px;
   letter-spacing: 2%;
-  margin-top: 50px;
-  margin-left: 50px
+  margin-top: -20px;
+  margin-left: 50px;
 }
 .education ul{
   padding-bottom: 120px;
@@ -971,14 +973,17 @@ ul li::before {
   margin-bottom: 0;
 }
 .checkball{
+  margin-top: -20px;
+  margin-left: 100px;
   background-color: white;
   width: 35px;
   height: 35px;
 }
 .check{
+
   margin-right: 50px;
   margin-left: -60px;
-  margin-top: 5px;
+  margin-top: -15px;
   stroke-dasharray: 93.10029602050781;
   stroke-dashoffset: 93.10029602050781;
   stroke-linecap: round;
@@ -1003,9 +1008,9 @@ ul li::before {
   margin-bottom: 65px;
 }
 .contacts{
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width:28%;
 }
 .contactimg{
   width: 65px;

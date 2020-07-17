@@ -1,0 +1,134 @@
+@media (max-width: 1439px) and (min-width: 1023px){
+
+  h1{
+    font-size: 38px;
+    font-family: RobotoBold;
+  }
+
+  h2{
+    font-size: 44px;
+    font-family: RobotoBold;
+  }
+
+  h3{
+    font-size: 36px;
+    font-family: RobotoBold;
+
+  }
+
+  h4{
+    font-size: 24px;
+    font-family: OSansRegular;
+  }
+
+
+
+  header {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  header .row {
+    margin-left: 5.8vw;
+    margin-right: 5.3vw;
+
+  }
+
+  header a {
+    margin-left: 4vw;
+    font-size: 1.7vw;
+  }
+
+  header svg{
+    margin-right: 2vw;
+    height: 37px;
+    width: 37px;
+    margin-left: -5vw;
+  }
+
+/*********AboutMe******/
+
+
+  .aboutme{
+    padding-top: 120px;
+  }
+
+
+  .aboutme .row{
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .aboutme img{
+    margin-bottom: 50px;
+  }
+
+  .maths p{
+    width: 280px;
+  }
+
+  .bank p{
+    width: 280px;
+  }
+
+  .programming p{
+    width:280px;
+  }
+
+  .bank{
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  #mathematician{
+    margin-top: 70px;
+    width: 250px;
+    height:300px;
+  }
+  #banker{
+    margin-top: 100px;
+    width: 120px;
+    height: 270px;
+  }
+  #programmer{
+    margin-top: 70px;
+    width: 250px;
+    height:300px;
+  }
+
+  #path{
+    width: 1024px;
+    position:absolute;
+    top: 635px;
+  }
+  /*********Lenguajes y herramientas******/
+  .btn{
+    position:absolute;
+    width: 77vw;
+    height: 77vw;
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 50%;
+    background-color: #FA7267;
+    margin-top: -250px;
+    left: 700px;
+    z-index: 30;
+  }
+
+  .btn .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    border-radius: 50%;
+    background-color: #FA7267;
+    animation: pulse 1s infinite ;
+  }
+
+
+
+
+}
