@@ -2,16 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="static/mainpage/styles/style.css">
     <link rel="stylesheet" type="text/css" href="static/mainpage/styles/mobile.css">
     <link rel="stylesheet" type="text/css" href="static/mainpage/styles/tablet.css">
     <link rel="stylesheet" type="text/css" href="static/mainpage/styles/1030.css">
 
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <script src="https://kit.fontawesome.com/244a20b51c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -244,6 +243,28 @@
             });
         </script>
         <div class="aboutme index" id="hello">
+          <!-- fix bug making images disapear when changing sizes from mobile to laptop after swiping -
+          <script type="text/javascript">
+            window.addEventListener('resize', resetImages);
+            function resetImages() {
+              if ( window.innerWidth > 1023){
+                maths = document.getElementsByClassName('maths');
+                bank = document.getElementsByClassName('bank');
+                prog = document.getElementsByClassName('programming');
+                for (let i = 0; i < maths.length; i++){
+                  maths[i].style.display = "block";
+                }
+                for (let i = 0; i < bank.length; i++){
+                  bank[i].style.display = "block";
+                }
+                for (let i = 0; i < prog.length; i++){
+                  prog[i].style.display = "block";
+                }
+              }
+            }
+
+          </script>
+        -->
           <h1 >Fullstack development <br> de páginas y aplicaciones web</h1>
           <h4>Si hay algún problema que no pueda solucionar, <br> posiblemente no tenga solución</h4>
           <svg id="left" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">

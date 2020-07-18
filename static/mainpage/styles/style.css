@@ -108,14 +108,19 @@ a:active{
 }
 
 
-.contactimg:hover{
-  fill: #FA7267;
-}
-.svgs:hover{
+.contactimg:hover .svgs{
   fill: #FA7267;
 }
 
-.svgs:active{
+.contactimg:active .svgs{
+  opacity: 0.8;
+}
+
+.social:hover .svgs{
+  fill: #FA7267;
+}
+
+.social:active .svgs{
   opacity: 0.8;
 }
 
