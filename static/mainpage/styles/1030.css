@@ -97,11 +97,14 @@
     width: 250px;
     height:300px;
   }
-
-  #path{
-    width: 1024px;
+  .pathwrapper{
+    width: 100%;
     position:absolute;
     top: 635px;
+    left: 0px;
+  }
+  #path{
+    width: 1024px;
   }
   /*********Lenguajes y herramientas******/
   .btn{

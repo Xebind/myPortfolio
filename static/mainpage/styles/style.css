@@ -275,11 +275,15 @@ header svg{
   height:421px;
 
 }
-#path{
+.pathwrapper{
   position: absolute;
-  width: 1440px;
-
   top: 835px;
+  width: 100%;
+  left: 0px;
+}
+#path{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*********Lenguajes y herramientas******/
@@ -974,7 +978,7 @@ ul li::before {
   margin-top: -20px;
 }
 .education ul{
-  padding-bottom: 120px;
+  padding-bottom: 70px;
   /*para sobrescribir el margen de bootstrap*/
   margin-bottom: 0;
 }
