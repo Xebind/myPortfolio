@@ -191,26 +191,20 @@
                 position = position + 1;
                 var changes;
                 if (position == 1){
-                  changes = document.getElementsByClassName("maths");
+                  changes = document.getElementsByClassName("swipityswipe");
                   for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "none";
-                  }
-                  changes = document.getElementsByClassName("bank");
-                  for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "block";
+                    changes[i].style.transition = "1s";
+                    changes[i].style.marginLeft = "-150%";
                   }
 
                   document.getElementById("left").style.display = "block";
                 }
 
                 if (position == 2){
-                  var changes = document.getElementsByClassName("bank");
+                  changes = document.getElementsByClassName("swipityswipe");
                   for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "none";
-                  }
-                  changes = document.getElementsByClassName("programming");
-                  for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "block";
+                    changes[i].style.transition = "1s";
+                    changes[i].style.marginLeft = "-282%";
                   }
                   document.getElementById("right").style.display = "none";
                 }
@@ -221,28 +215,21 @@
                 var changes;
                 position = position - 1;
                 if (position == 0){
-                  var changes = document.getElementsByClassName("bank");
+                  changes = document.getElementsByClassName("swipityswipe");
                   for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "none";
-                  }
-                  changes = document.getElementsByClassName("maths");
-                  for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "block";
+                    changes[i].style.transition = "1s";
+                    changes[i].style.marginLeft = "-15%";
                   }
 
                   document.getElementById("left").style.display = "none";
                 }
 
                 if (position == 1){
-                  var changes = document.getElementsByClassName("programming");
+                  changes = document.getElementsByClassName("swipityswipe");
                   for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "none";
+                    changes[i].style.transition = "1s";
+                    changes[i].style.marginLeft = "-150%";
                   }
-                  changes = document.getElementsByClassName("bank");
-                  for(var i = 0; i < changes.length; i++){
-                     changes[i].style.display = "block";
-                  }
-
                   document.getElementById("right").style.display = "block";
                 }
               }

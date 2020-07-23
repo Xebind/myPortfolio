@@ -28,13 +28,13 @@
   }
 
   .aboutme .row{
-    margin-left: -5px;
+    margin-left: -15%;
     margin-bottom: 0px;
   }
   .swipityswipe {
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 400%;
   }
   .swipityswipe  img {
       min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
@@ -45,20 +45,24 @@
     width: 100%;
   }
   .maths{
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
+    transition: 1s;
   }
 
   .bank{
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
-    display: none;
+    transition: 1s;
   }
 
   .programming{
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
-    display: none;
+    transition: 1s;
   }
   .aboutme img{
     margin-bottom: 50px;
