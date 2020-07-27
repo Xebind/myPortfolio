@@ -1,0 +1,36 @@
+@media (max-width: 1023px){
+
+  #Bugzzy{
+    width: 256px;
+    height: 256px;
+  }
+
+  #starters{
+    position: relative;
+    left:0;
+  }
+  #catch{
+    display: none;
+  }
+  #about{
+    position: relative;
+    left:0;
+  }
+
+  .phonebtns{
+    margin-top: 30px;
+    width: 320px;
+    text-align: center;
+    margin-left:  auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width:600px){
+  p{
+    font-size: 12px;
+  }
+  button{
+    font-size: 12px;
+  }
+}

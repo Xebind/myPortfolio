@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/tablet.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <title>PokeStarters</title>
+  </head>
+
+  <body>
+    <div class="message" onclick="returntomenu();">
+        <p id="message">Welcome to my Pokemon Lab. I am professor Bugz Buggy. I have been researching Pokemon DNA for a long time and accidentally I combined myself with a sample. <br> <br> I just wish it was a Machoke sample instead of a Caterpie... <br> <br> Please enjoy your stay in the Lab.</p>
+    </div>
+    <div id="welcome">
+      <img id="Bugzzy" src="https://piskel-imgstore-b.appspot.com/img/72ad2f70-ce53-11ea-8535-676202f1d98d.gif" alt="Prof.Bug">
+      <div class="phonebtns">
+        <button type="button" name="button" id="starters" onclick="ShowStarters();" >See Starters</button>
+        <button type="button" name="button" id="about"  onclick="ShowQuiz();"> About Me</button>
+      </div>
+      <button type="button" name="button" id="catch" onclick="letsPlay();">Catch'em All</button>
+    </div>
+
+    <div id="Box1" class="row">
+    </div>
+
+    <div id="ttt">
+      <button type="button" name="button" class"tttbuttons" id="Xbutton" onclick="Game(X); GameStart();">Play as <br> Charmander</button>
+      <button type="button" name="button" class"tttbuttons" id="Obutton" onclick="Game(O); GameStart();">Play as <br> Squirtle</button>
+      <canvas id="tttcanvas" width="600" height="600" onclick="mousePressed();"></canvas>
+    </div>
+    <script src="static/scripts/ttt.js"></script>
+
+
+    <div class="container" id="quiz">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const startButton = document.getElementById('start-btn');
+      const nextButton = document.getElementById('next-btn');
+      const questionContainerElement = document.getElementById('question-container');
+      const questionElement = document.getElementById('question');
+      const answerButtonsElement = document.getElementById('answer-buttons');
+      var score = 0;
+
+      let shuffledQuestions, currentQuestionIndex;
+
+      startButton.addEventListener('click', startGame);
+      nextButton.addEventListener('click', () => {
+      currentQuestionIndex++;
+      setNextQuestion();
+      });
+
+      function startGame() {
+        score = 0;
+        startButton.classList.add('hide');
+        shuffledQuestions = questions;
+        currentQuestionIndex = 0;
+        questionContainerElement.classList.remove('hide');
+        setNextQuestion();
+      }
+
+      function setNextQuestion() {
+        resetState();
+        showQuestion(shuffledQuestions[currentQuestionIndex]);
+      }
+
+      function showQuestion(question) {
+        questionElement.innerHTML = question.question;
+        question.answers.forEach(answer => {
+          const button = document.createElement('button');
+          button.innerText = answer.text;
+          button.classList.add('btn');
+          if (answer.correct) {
+            button.dataset.correct = answer.correct;
+          }
+          button.addEventListener('click', selectAnswer)
+          answerButtonsElement.appendChild(button);
+        })
+      }
+
+      function resetState() {
+        clearStatusClass(document.body);
+        nextButton.classList.add('hide');
+        while (answerButtonsElement.firstChild) {
+          answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+        }
+      }
+
+      function selectAnswer(e) {
+        const selectedButton = e.target;
+        const correct = selectedButton.dataset.correct;
+        //lazy way to tell the pc to add score just once per question
+        if (correct && nextButton.classList.contains("hide") && startButton.classList.contains("hide")) {
+          score = score + 1;
+        }
+        setStatusClass(document.body, correct);
+        Array.from(answerButtonsElement.children).forEach(button => {
+          setStatusClass(button, button.dataset.correct);
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+          nextButton.classList.remove('hide');
+        } else {
+          startButton.innerHTML = `Your score was ${score} / 4 <br>  Click to restart`;
+          startButton.classList.remove('hide');
+        }
+      }
+
+      function setStatusClass(element, correct) {
+        clearStatusClass(element);
+        if (correct) {
+          element.classList.add('correct');
+        } else {
+          element.classList.add('wrong');
+        }
+      }
+
+        function clearStatusClass(element) {
+        element.classList.remove('correct');
+        element.classList.remove('wrong');
+      }
+
+      const questions = [
+                      {
+                        question: '<p>What was my 1st gen starter?</p>',
+                        answers: [
+                          { text: 'Bulbasaur', correct: false },
+                          { text: 'Charmander', correct: false },
+                          { text: 'Squirtle', correct: true },
+                          { text: 'Pikachu', correct: false }
+                        ]
+                      },
+                      {
+                        question: '<p>How long did it take to me to leave the house in Pallet Town? (I was 5y old)</p>',
+                        answers: [
+                          { text: '5 minutes', correct: false },
+                          { text: 'A week', correct: false },
+                          { text: 'A month', correct: true },
+                          { text: 'Still did not figure it out...', correct: false }
+                        ]
+                      },
+                      {
+                        question: '<p>Which is my favourite Pokemon?</p>',
+                        answers: [
+                          { text: 'Ditto', correct: false },
+                          { text: 'Magikarp', correct: true },
+                          { text: 'Charizard', correct: false },
+                          { text: 'Shuckle', correct: false }
+                        ]
+                      },
+                      {
+                        question: '<p>Why is Magikarp my favourite Pokemon?</p>',
+                        answers: [
+                          { text: 'I like sashimi', correct: false },
+                          { text: 'It is cute', correct: false },
+                          { text: 'Its moveset is bad but its stats are quite decent', correct: false },
+                          { text: 'It proves that with effort anyone can improve', correct: true }
+                        ]
+                      }
+                      ]
+    </script>
+
+
+    <script type="text/javascript">
+        const starters = [1, 4, 7,  25, 133, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501, 650, 653, 656, 722, 725, 728];
+        // once the API gets updated to gen8 just delete previous array and use new one below.
+        //const starters = [1, 4, 7, 152, 155, 158, 252, 255, 258, 387, 390, 393, 495, 498, 501, 650, 653, 656, 722, 725, 728, 810, 813, 816];
+
+        //we consider Pikachu and Eevee as starters, at least Pikachu from edition yellow.
+        const otherstarters = [25, 133];
+
+        const Box1 = document.getElementById("Box1");
+        const header = document.getElementById("message");
+
+        const mainmessage = "Welcome to my Pokemon Lab. I am professor Bugz Buggy. I have been researching Pokemon DNA for a long time and accidentally I combined myself with a sample. <br> <br> I just wish it was a Machoke sample instead of a Caterpie... <br> <br> Please enjoy your stay in the Lab.";
+        const startersmessage = "Please, enjoy the dance of my favourite pokemons :D <br><br> Click here to return to the main menu.";
+        const quizmessage = "Since we may be coworkers soon, here you can find 4 questions to get to know me a little bit better, good luck!<br><br> Click here to return to the main menu.";
+        const tttmessage = 'I dare you to beat my Alakazam in a game of TicTacToe. <br>Beware! He can read your mind!<br><br> Click here to return to the main menu.';
+
+        async function Pokeget(id){
+          const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+          const response = await fetch(url);
+          const pokemon = await response.json();
+          var moveclass = "odd";
+          if (id % 2 == 0){
+            moveclass = "even";
+          }
+
+          ShowPokemon(pokemon, moveclass);
+        }
+
+
+
+        async function ShowPokemon(pokemon, moveclass){
+          const pokeEl = document.createElement("div");
+          pokeEl.classList.add("pokemon");
+          pokeEl.classList.add(moveclass);
+
+          const pokeInnerHTML = `
+            <div class = "pokeimage">
+              <img src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png">
+            </div>
+          `;
+
+          pokeEl.innerHTML = pokeInnerHTML;
+          await Box1.appendChild(pokeEl);
+        }
+
+        //code to show gen 8 starters while API is incomplete
+        function gen8(){
+          for (let i = 0; i < 3; i++){
+            const pokeEl = document.createElement("div");
+            pokeEl.classList.add("pokemon");
+            // we must initialize the variable before loop, just use 0 and var so we can change it later
+            var pokeInnerHTML = 0;
+            if (i == 0){
+               pokeEl.classList.add("even");
+               pokeInnerHTML = `
+                <div class = "pokeimage">
+                  <img src = "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7a/latest/20190816174348/Grookey.png/200px-Grookey.png">
+                </div>
+              `;
+            }
+            else if (i == 1) {
+               pokeEl.classList.add("odd");
+
+               pokeInnerHTML = `
+                <div class = "pokeimage">
+                  <img src = "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/cc/latest/20190816174326/Scorbunny.png/200px-Scorbunny.png">
+                </div>
+              `;
+            }
+            else{
+               pokeEl.classList.add("even");
+
+               pokeInnerHTML = `
+                <div class = "pokeimage">
+                  <img src = "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0c/latest/20190816173358/Sobble.png/200px-Sobble.png">
+                </div>
+              `;
+            }
+
+            pokeEl.innerHTML = pokeInnerHTML;
+            Box1.appendChild(pokeEl);
+
+          }
+        }
+
+        // Not necessary, but otherwise it won't display starters in order.
+        async function DoTheThing(){
+          for (let i = 0; i < starters.length; i++){
+            await Pokeget(starters[i]);
+          }
+          //delete once API is complete
+          await gen8();
+        }
+
+        DoTheThing();
+
+        function ShowStarters(){
+          const welcome = document.getElementById("welcome");
+          header.innerHTML = startersmessage;
+          Box1.style.display = "flex";
+          welcome.style.display = " none "
+        }
+
+        function ShowQuiz(){
+          const quiz = document.getElementById("quiz");
+          header.innerHTML = quizmessage;
+          quiz.style.display = "block";
+
+          welcome.style.display = " none "
+        }
+
+        function letsPlay(){
+          const ttt = document.getElementById("ttt");
+          header.innerHTML = tttmessage;
+          ttt.style.display = "block";
+
+          welcome.style.display = " none "
+
+        }
+
+        function returntomenu(){
+          Box1.style.display = "none";
+          quiz.style.display = "none";
+          ttt.style.display = "none";
+
+
+          welcome.style.display = "block";
+          header.innerHTML = mainmessage;
+
+
+        }
+
+
+        /*    We tried to automatize the code to gifted pokemons at lvl 5, but a Magikarp and a Beldum made their way in
+        async function GiftPokemons(id){
+          const url = `https://pokeapi.co/api/v2/pokemon/${id}/encounters`;
+          const response = await fetch(url);
+          const encounters = await response.json();
+          for (let i = 0; i < encounters.length; i++){
+            //for some reason the details are i
+            const details = encounters[i]["version_details"][0]["encounter_details"][0];
+            //console.log(details);
+            //console.log(details["method"]);
+            //console.log(details["method"]["name"])
+            if ((details["chance"] == 100) && (details["max_level"] == 5) && (details["method"]["name"] == "gift") && (details["min_level"] == 5)){
+              await Pokeget(id);
+            }
+
+            //for (let j = 0; j < details.length; j++){
+            //}
+          }
+        }
+        for (let i = 1; i < 800; i++){
+           GiftPokemons(i);
+        }
+        */
+    </script>
+
+  </body>
+</html>

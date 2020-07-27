@@ -1,0 +1,243 @@
+@font-face{
+  font-family: pokefont;
+  src: url(fonts/PokemonGb.ttf);
+}
+
+@font-face{
+  font-family: roboto;
+  src: url(fonts/RobotoMono-Bold.ttf);
+}
+
+
+
+body{
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKElEQVQ4T2M8fvz4fwYKAOMwMKCuro6yMBgGBgyDaKTYC8MgGin1AgBRFS55PKYemAAAAABJRU5ErkJggg==");
+  text-align:  center;
+  vertical-align: middle;
+}
+
+p{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: pokefont;
+  font-size: 16px;
+
+  margin-top: 20px;
+}
+
+button{
+  padding: 10px 20px 10px 20px;
+  font-family: roboto;
+  font-size: 16px;
+  background-color: white;
+}
+
+#welcome{
+}
+
+
+#Bugzzy{
+  width: 512px;
+  height: 512px;
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+#starters{
+  position: absolute;
+  top: 40%;
+  left: 7%;
+}
+#catch{
+  position: absolute;
+  top: 75%;
+  left: 7%;
+}
+#about{
+  position: absolute;
+  top: 60%;
+  left: 85%;
+}
+
+.message{
+  position: relative;
+  margin-top: 5%;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  border-style: solid;
+}
+
+img{
+  width: 200px;
+  height: auto;
+}
+
+.pokeimage:hover{
+  animation-duration: 0.5s;
+}
+
+.row{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+#Box1{
+  display: none;
+  position: relative;
+  margin-top: 50px;
+}
+
+.even{
+  animation: evenpokemove 1s infinite;
+}
+.odd{
+  animation: oddpokemove 1s infinite;
+}
+
+@keyframes evenpokemove {
+  0%{
+    margin-top: 0px;
+  }
+  50%{
+    margin-top: 10px;
+  }
+  100%{
+    margin-top: 0px;
+  }
+}
+
+@keyframes oddpokemove {
+  0%{
+    margin-top: 10px;
+  }
+  50%{
+    margin-top: 00px;
+  }
+  100%{
+    margin-top: 10px;
+  }
+}
+
+
+#ttt{
+  display: none;
+}
+
+#tttcanvas{
+  border: 2px solid #FFF;
+  position: absolute;
+  margin :auto;
+  top:30%;
+  right:0;
+  left:0;
+  background: white;
+}
+
+#Xbutton{
+  position: absolute;
+  top:50%;
+  left:0;
+  margin-left: calc(13vw - 100px)
+}
+#Obutton{
+  position: absolute;
+  top:60%;
+  left:0;
+  margin-left: calc(13vw - 100px)
+}
+
+
+/*
+#Nim{
+  margin-top: 300px;
+}
+.nimImage{
+  width: 100px;
+}
+
+
+.row{
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Nim .row:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+.container {
+  display: none;
+  width: 800px;
+  margin-top: 100px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
