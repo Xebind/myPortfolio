@@ -13,7 +13,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -183,90 +190,94 @@
           </div>
       </div>
       <div class="Pagesize">
-        <script type="text/javascript">
-          $(document).ready(function() {
-              var position = 0;
-
-              document.getElementById("right").onclick = function() {slideright()};
-              function slideright() {
-                position = position + 1;
-                var changes;
-                if (position == 1){
-                  changes = document.getElementsByClassName("swipityswipe");
-                  for(var i = 0; i < changes.length; i++){
-                    changes[i].style.transition = "1s";
-                    changes[i].style.marginLeft = "-150%";
-                  }
-
-                  document.getElementById("left").style.display = "block";
-                }
-
-                if (position == 2){
-                  changes = document.getElementsByClassName("swipityswipe");
-                  for(var i = 0; i < changes.length; i++){
-                    changes[i].style.transition = "1s";
-                    changes[i].style.marginLeft = "-282%";
-                  }
-                  document.getElementById("right").style.display = "none";
-                }
-              }
-
-              document.getElementById("left").onclick = function() {slideleft()};
-              function slideleft() {
-                var changes;
-                position = position - 1;
-                if (position == 0){
-                  changes = document.getElementsByClassName("swipityswipe");
-                  for(var i = 0; i < changes.length; i++){
-                    changes[i].style.transition = "1s";
-                    changes[i].style.marginLeft = "-15%";
-                  }
-
-                  document.getElementById("left").style.display = "none";
-                }
-
-                if (position == 1){
-                  changes = document.getElementsByClassName("swipityswipe");
-                  for(var i = 0; i < changes.length; i++){
-                    changes[i].style.transition = "1s";
-                    changes[i].style.marginLeft = "-150%";
-                  }
-                  document.getElementById("right").style.display = "block";
-                }
-              }
-            });
-        </script>
         <div class="aboutme index" id="hello">
-          <!-- fix bug making images disapear when changing sizes from mobile to laptop after swiping -
-          <script type="text/javascript">
-            window.addEventListener('resize', resetImages);
-            function resetImages() {
-              if ( window.innerWidth > 1023){
-                maths = document.getElementsByClassName('maths');
-                bank = document.getElementsByClassName('bank');
-                prog = document.getElementsByClassName('programming');
-                for (let i = 0; i < maths.length; i++){
-                  maths[i].style.display = "block";
-                }
-                for (let i = 0; i < bank.length; i++){
-                  bank[i].style.display = "block";
-                }
-                for (let i = 0; i < prog.length; i++){
-                  prog[i].style.display = "block";
-                }
-              }
-            }
-
-          </script>
-        -->
           <h1 >Fullstack development <br> de páginas y aplicaciones web</h1>
           <h4>Si hay algún problema que no pueda solucionar, <br> posiblemente no tenga solución</h4>
+          <!--
           <svg id="left" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
           </svg>
           <svg id="right"  width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
           </svg>
+        -->
+          <style media="screen">
+              .swiper-container {
+                width: 100%;
+                height: 100%;
+              }
+
+              .swiper-slide {
+                text-align: center;
+                width: 100%;
+                background: #fff;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+              }
+          </style>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="maths mypath">
+                  <img id="mathematician" src="static/mainpage/images/Mat.svg">
+                  <p>Hola, soy Marc, matemático amante del razonamiento lógico. Empecé a estudiar matemáticas porque me parecían algo divertido, y ciertamente disfruté de mis años en la carrera.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="bank mypath">
+                  <img id="banker" src="static/mainpage/images/banker.svg">
+                  <p>Tras graduarme me cotrataron en Banc Sabadell, donde empecé a familiarizarme con programación en lenguajes que desconocía, aplicando mis conocimientos y mi lógica mejoré sus algoritmos fácilmente!</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="programming mypath">
+                  <img id="programmer" src="static/mainpage/images/Rob.svg">
+                  <p>Más adelante me interesé más aún en la programación y en tan solo dos meses aprendí conceptos básicos de C y me especialicé en Python, programación web (fullstack), programación de videojuegos e incluso me introduje en el mundo de la inteligencia artificial. </p>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows
+            <div class="swiper-button-next">
+              <svg id="left" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg id="right"  width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
+              </svg>
+            </div>  -->
+            <svg id="left" class="swiper-button-prev" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
+            </svg>
+            <svg id="right" class="swiper-button-next" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.32 17.5733C0.533333 17.7867 0.8 17.8933 1.06667 17.8933C1.33333 17.8933 1.6 17.7867 1.81333 17.5733L9.68 9.70667C10.1067 9.28 10.1067 8.61333 9.68 8.18667L1.84 0.32C1.41333 -0.106667 0.746667 -0.106667 0.32 0.32C-0.106667 0.746667 -0.106667 1.41333 0.32 1.84L7.44 8.96L0.32 16.0533C-0.08 16.48 -0.08 17.1467 0.32 17.5733Z" fill="#FA7267"/>
+            </svg>
+
+          </div>
+
+
+          <script>
+            var swiper = new Swiper('.swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+
           <div class="row swipityswipe">
             <div class="maths mypath">
               <img id="mathematician" src="static/mainpage/images/Mat.svg">

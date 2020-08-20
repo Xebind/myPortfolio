@@ -220,6 +220,10 @@ header svg{
   display: none;
 }
 
+.swiper-container{
+  display: none;
+}
+
 .aboutme{
   text-align: center;
   padding-top: 180px;
